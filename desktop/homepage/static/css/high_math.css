@@ -1,0 +1,41 @@
+.unit-list{
+  width: 90%;
+  margin: 1% 2.5% 2.5% 2.5%;
+}
+
+.main-unit, .unit{
+  margin: auto 1rem;
+  background: rgba(0, 0, 0, 0);
+}
+
+.main-unit{
+  border-left: 2rem solid #eae83a;
+  padding-left: 1rem;
+  font-size: 2.5rem;
+}
+
+.unit{
+  font-size: 2rem;
+}
+
+.lesson{
+  width: 92.5%;
+  margin-left: 2.5%;
+  margin-right: 5%;
+  margin-top: 2rem;
+}
+
+.lesson-unit, .lesson-sentence{
+  font-size: 2rem;
+}
+
+.lesson-unit{
+  /* background-color: #eae83a; */
+  background: rgba(234,232,58,0.5);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.lesson-sentence{
+
+}

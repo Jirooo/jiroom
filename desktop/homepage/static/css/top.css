@@ -1,0 +1,51 @@
+/* 変化 */
+.section-title{
+  transition-property: all;
+  transition-duration: 1s;
+}
+
+
+.section-title{
+  display: block;
+  font-size: 3rem;
+  width: 25%;
+  height: 5rem;
+  /* background: rgba(234, 232, 58, 1); */
+  background-color: #eae83a;
+  border-radius: 3rem;
+}
+
+.section-title::before{
+  content: '◉';
+  color: black;
+  margin-left: 1rem;
+}
+
+.section-title:hover{
+  width: 100%;
+}
+
+.sentence{
+  width: 90%;
+  margin: 2.5%;
+}
+
+.main-unit, .unit{
+  margin: auto 1rem;
+  background: rgba(0, 0, 0, 0);
+}
+
+.main-unit{
+  font-size: 2.5rem;
+  border-left: 2rem solid #eae83a;
+  padding-left: 1rem;
+}
+
+.unit{
+  font-size: 2rem;
+}
+
+.sentence p{
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0);
+}

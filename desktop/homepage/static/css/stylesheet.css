@@ -1,0 +1,94 @@
+/* border-box */
+.main, .contents{
+  box-sizing: border-box;
+}
+/* 変化 */
+.top-btn{
+  transition-property: all;
+  transition-duration: 1s;
+}
+/* 透明 */
+.section, .unit-list{
+  background: rgba(0,0,0,0);
+}
+
+
+/* ABOUT TOP */
+.top{
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 10rem;
+  padding-top: 1rem;
+}
+
+.top-logo{
+  font-size: 3rem;
+  margin-left: 3rem;
+}
+
+.top-list{
+  text-align: center;
+  height: 6rem;
+  background-color: #eae83a;
+}
+
+.btn-box{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  background-color: #eae83a;
+  width: 12rem;
+  height: 6rem;
+  margin: 0 2rem;
+}
+
+.top-btn, .btn-space{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 3.2rem;
+  width: 9.5rem;
+  border-radius: 0.5rem;
+}
+
+.btn-space{
+  z-index: 10;
+  transform: translate(-50%, -50%);
+}
+
+.top-btn{
+  z-index: 20;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0);
+  border: 0.2rem solid black;
+  transform: translate(-58%, -73%);
+}
+
+.top-btn:hover{
+  transform: translate(-50%, -50%);
+}
+
+
+/* ABOUT MAIN */
+.main{
+  margin: 13rem 5rem;
+  width: 70%;
+  margin-left: 3.5%;
+  margin-right: 26.5%;
+}
+
+.contents{
+  margin-top: 3rem;
+  padding: 3rem 3rem 2rem 3rem;
+  background-color: #EEEEEE;
+  border-radius: 1rem;
+}
+
+
+/* ABOUT FOOTER */
+.footer{
+  background-color: #eae83a;
+  height: 10rem;
+}
