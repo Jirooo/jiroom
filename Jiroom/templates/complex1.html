@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/complex1.css') }}">
+<title>虚数・複素数</title>
+{% endblock %}
+
+{% block body %}
+<main>
+    <div class="main">
+        <div class="main-wrapper">
+           <div class="lesson">
+               <h3 class="lesson-title">[複素数] 虚数・複素数とは</h3>
+               <img src="static/images/complex/main1.png" class="main-image">
+               <div class="section">
+                   <div class="section-title" id="section1">
+                       <h6><span class="color">虚</span>数とは</h6>
+                   </div>
+                   <div class="sentence">
+                       <p>虚数とは</p>
+                       <p>二乗すると負の値になる数。</p>
+                       <br>
+                       <p>example</p>
+                       <img src="static/images/complex/image1.png" class="image image1">
+                       <br><br>
+                       <p>二乗して-1になる数を i とし、単位虚数という。</p>
+                       <br>
+                       <p>definition</p>
+                       <img src="static/images/complex/image2.png" class="image image2">
+                       <br><br>
+                       <p>虚数を英語で書くと "imaginary number".</p>
+                       <p>直訳すると「架空の数」というように、虚数は存在しないのだろうか。</p>
+                       <p>わからないが、便利な概念であることは確か。</p>
+                       <p>数学者でない私にとってはそれで十分である。</p>
+                   </div>
+               </div>
+
+               <div class="section">
+                  <div class="section-title" id="section2">
+                     <h6><span class="color">複</span>素数とは</h6>
+                  </div>
+                  <div class="sentence">
+                    <p>複素数とは</p>
+                    <p>虚数と実数を組み合わせた数。</p>
+                    <br>
+                    <p>definition</p>
+                    <img src="static/images/complex/image3.png" class="image image3">
+                    <br><br>
+                    <p>example</p>
+                    <img src="static/images/complex/image4.png" class="image image3">
+                    <br><br>
+                    <p>definition</p>
+                    <img src="static/images/complex/image5.png" class="image image4">
+                  </div>
+               </div>
+
+               <div class="section">
+                  <div class="section-title" id="section3">
+                     <h6><span class="color">複</span>素数のメリット</h6>
+                  </div>
+                  <div class="sentence">
+                     <p>1.</p>
+                     <p>実数の範囲だけを考えると、解なしという答えが出てくる場合がある。</p>
+                     <p>複素数の範囲を考えることで全ての二次方程式の解を求めることができる。</p>
+                     <br>
+                     <p>example</p>
+                     <img src="static/images/complex/image6.png" class="image image5">
+                     <br><p>3.</p>
+                     <p>極座標平面で考えることで、点の移動・回転が簡単にできる。</p>
+                     <p>点の回転は行列を使うと可能だが計算が大変であるため、虚数を使うと便利。</p>
+                     <br><p>3.</p>
+                     <p>物理現象を虚数を使って実現することができる。</p>
+                     <br>
+                     <ul>
+                         <li>
+                            <p>オイラーの公式</p>
+                            <img src="static/images/complex/image9.png" class="image image2">
+                         </li>
+                     </ul>
+                     <br><br>
+                     <p>詳しくは別の機会でやろうと思う。</p>
+                  </div>
+               </div>
+
+                <div class="section">
+                    <div class="section-title" id="section4">
+                        <h6><span class="color">ま</span>とめ</h6>
+                    </div>
+                    <div class="sentence">
+                        <p>・虚数とは二乗すると負の値になる数。</p>
+                        <p>・特に i<sup>2</sup>=-1 となる虚数 i を虚数単位という。</p>
+                        <p>・複素数とは a + bi で表される数。</p>
+                        <p>・複素数のメリット
+                            <ul>
+                                <li>全ての二次方程式の解が求まる。</li>
+                                <li>点の移動・回転が容易になる。</li>
+                                <li>物理現象を虚数を使うことで表すことができる。</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <p class="next-sentence">Next ...<a href="/complex2" class="next">複素平面</a></p>
+                </div>
+           </div>
+        </div>
+    </div>
+
+    <div class="side">
+        <div class="contents">
+            <p>Contents</p>
+            <ul>
+                <li><a href="#section1">虚数とは</a></li>
+                <li><a href="#section2">複素数とは</a></li>
+                <li><a href="#section3">複素数のメリット</a></li>
+                <li><a href="#section4">まとめ</a></li>
+            </ul>
+        </div>
+    </div>
+</main>
+{% endblock %}

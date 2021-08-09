@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/complex6.css') }}">
+<title>複素数の割り算</title>
+{% endblock %}
+
+{% block body %}
+<main>
+    <div class="main">
+        <div class="main-wrapper">
+           <div class="lesson">
+               <h3 class="lesson-title">[複素数] 複素数割り算</h3>
+               <img src="static/images/complex/complex9.png" class="main-image">
+
+               <div class="section">
+                   <div class="section-title" id="section2">
+                      <h6>複素数の割り算</h6>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </div>
+
+    <div class="side">
+        <div class="contents">
+            <p>Contents</p>
+            <ul>
+                <li><a href="#section1">複素数の割り算</a></li>
+            </ul>
+        </div>
+    </div>
+</main>
+{% endblock %}
