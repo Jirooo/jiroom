@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/machineLearning1.css') }}">
+<title>多項式フィッティング</title>
+{% endblock %}
+
+{% block body %}
+<main>
+    <div class="main">
+        <div class="main-wrapper">
+           <div class="lesson">
+               <h3 class="lesson-title">[機械学習] 多項式フィッティング</h3>
+               <img src="static/images/complex/.png" class="main-image">
+               <div class="section">
+                   <div class="section-title" id="section1">
+                       <h6><span class="color">多</span>項式フィッティング</h6>
+                   </div>
+                   <div class="sentence">
+                       <p>sin関数にランダムなノイズを加えて訓練データD=(x,t)=(x<sub>1</sub>,t<sub>1</sub>),...,(x<sub>n</sub>,t<sub>n</sub>)を生成する。</p>
+                       <img src="static/images/machineLearning/sin2.png" class="image1">
+                       <img src="static/images/machineLearning/sin1.png" class="image1">
+                       <p>この訓練データから、新たな入力変数xに対応するtを予測する。</p>
+                       <p>つまりx<sub>n+1</sub>,x<sub>n+2</sub>,...と入力したとき、に対応するt<sub>n+1</sub>,t<sub>n+2</sub>,...を予測できるような関数を求める。</p>
+                       <br>
+                       <p>1.訓練データを以下の多項式に当てはめる。</p>
+                       <ul>
+                           <img src="static/images/machineLearning/curveFitting1.png" class="image image1">
+                           <li>y(x,w)はwの線形関数であるから、<a href="#">線形モデル</a>である。</li>
+                        </ul>
+                       <p>2.最小二乗法を用いてwを求める。</p>
+                       <ul>
+                           <li>1の多項式に当てはめてできた関数y(x,w)と訓練データtの差が最小になるようなwを求める。</li>
+                           <img src="static/images/machineLearning/leastSquare3.png" class="image1">
+                           <li>xの次数Mによってどう結果が変わるか調べる。</li>
+                       </ul>
+                   </div>
+               </div>
+               <div class="section-title" id="section2">
+                   <h6><span class="color">最</span>小二乗法</h6>
+               </div>
+               <div class="sentence">
+                   <img src="static/images/machineLearning/leastSquare2.png" class="image image2">
+                   <p>つまり</p>
+                   <img src="static/images/machineLearning/leastSquare1.png" class="image image3">
+                   <p>が最小になるようなwを求める。</p>
+                   <br>
+                   <p>Example</p>
+                   <p>・M=0のとき</p>
+                   <ul>
+                       <li>y(x,w)=w<sub>0</sub> を</li>
+                       <li>E(w)=1/2Σ{y(x<sub>n</sub>,w)-t<sub>n</sub>}<sup>2</sup> に代入して</li>
+                       <li>∂E/∂w<sub>i</sub>=0 (i=0) を解くと</li>
+                       <li>w = (0.04)</li>
+                       <img src="static/images/machineLearning/m_0.png" class="image1">
+                   </ul>
+                   <br>
+                   <p>・M=1のとき</p>
+                   <ul>
+                       <li>y(x,w)=w<sub>0</sub>+w<sub>1</sub>x を</li>
+                       <li>E(w)=1/2Σ{y(x<sub>n</sub>,w)-t<sub>n</sub>}<sup>2</sup> に代入して</li>
+                       <li>∂E/∂w<sub>i</sub>=0 (i=0,1) を解くと</li>
+                       <li>w = (0.73,-0.22)</li>
+                       <img src="static/images/machineLearning/m_1.png" class="image1">
+                   </ul>
+                   <p>・M=3のとき</p>
+                   <ul>
+                       <li>y(x,w)=w<sub>0</sub>+w<sub>1</sub>x+w<sub>2</sub>x<sup>2</sup>+w<sub>3</sub>x<sup>3</sup> を</li>
+                       <li>E(w)=1/2Σ{y(x<sub>n</sub>,w)-t<sub>n</sub>}<sup>2</sup> に代入して</li>
+                       <li>∂E/∂w<sub>i</sub>=0 (i=0,1,2,3) を解くと</li>
+                       <li>w = (0.00,1.67,-0.80,0.09)</li>
+                       <img src="static/images/machineLearning/m_3.png" class="image1">
+                   </ul>
+                   <p>・M=9のとき</p>
+                   <ul>
+                       <li>y(x,w)=w<sub>0</sub>+w<sub>1</sub>x+w<sub>2</sub>x<sup>2</sup>+w<sub>3</sub>x<sup>3</sup>+w<sub>4</sub>x<sup>4</sup>+w<sub>5</sub>x<sup>5</sup>+w<sub>6</sub>x<sup>6</sup>+w<sub>7</sub>x<sup>7</sup>+w<sub>8</sub>x<sup>8</sup>+w<sub>9</sub>x<sup>9</sup> を</li>
+                       <li>E(w)=1/2Σ{y(x<sub>n</sub>,w)-t<sub>n</sub>}<sup>2</sup> に代入して</li>
+                       <li>∂E/∂w<sub>i</sub>=0 (i=0,1,...,9) を解くと</li>
+                       <li>w = (0.13,-1.03,4.87,-5.25,3.02,-1.13,0.28,-0.04,0.00,0.00)</li>
+                       <img src="static/images/machineLearning/m_9.png" class="image1">
+                   </ul>
+                   <p>・M=10のとき</p>
+                   <ul>
+                       <li>y(x,w)=w<sub>0</sub>+w<sub>1</sub>x+w<sub>2</sub>x<sup>2</sup>+w<sub>3</sub>x<sup>3</sup>+w<sub>4</sub>x<sup>4</sup>+w<sub>5</sub>x<sup>5</sup>+w<sub>6</sub>x<sup>6</sup>+w<sub>7</sub>x<sup>7</sup>+w<sub>8</sub>x<sup>8</sup>+w<sub>9</sub>x<sup>9</sup>+w<sub>10</sub>x<sup>10</sup> を</li>
+                       <li>E(w)=1/2Σ{y(x<sub>n</sub>,w)-t<sub>n</sub>}<sup>2</sup> に代入して</li>
+                       <li>∂E/∂w<sub>i</sub>=0 (i=0,1,...,10) を解くと</li>
+                       <li>w = (0.13,15.45,-65.90,115.76,-107.49,59.18,-20.35,4.42,-0.59,0.04,0.00)</li>
+                       <img src="static/images/machineLearning/m_10.png" class="image1">
+                   </ul>
+                   <br>
+                   <p>Consideration</p>
+                   <p>M=0,1のときは、y(x,w)は直線のため適さない。</p>
+                   <p>M=3~9はsin波に近い関数で、直感的には適しているよう。</p>
+                   <p>M=3のとき、y(x,w)=0.0979359457069259</p>
+                   <p>M=9のとき、y(x,w)=0.0181260321922681</p>
+                   <p>y(x,w)で評価すると、Mが大きい方が訓練データとの誤差が少なく、よりいい関数が出ている。</p>
+                   <p>しかしM=10のとき、全ての訓練データには通っているが、新たな入力に対して正しい値が出力されにくい。</p>
+                   <p>これを過学習という。</p>
+               </div>
+           </div>
+        </div>
+    </div>
+
+    <div class="side">
+        <div class="contents">
+            <p>Contents</p>
+            <ul>
+                <li><a href="#section1">多項式フィッティング</a></li>
+                <li><a href="#section2">最小二乗法</a></li>
+                <li><a href="#section4">まとめ</a></li>
+            </ul>
+        </div>
+    </div>
+</main>
+{% endblock %}
