@@ -1,0 +1,158 @@
+
+/* メインの実装 */
+main{
+    position: relative;
+    z-index: 10;
+    display: flex;
+}
+
+/* メインコンテンツの実装 */
+.main{
+    width: 72%;
+}
+
+/* レッスンを置く場所 */
+.main-wrapper{
+    position: relative;
+    z-index: 20;
+    margin-top: 30px;
+    width: 85%;
+    margin-left: 15%;
+    /* background-color: #EEEEEE; */
+}
+
+/* レッスン内容 */
+.lesson{
+    width: 90%;
+    margin: 0 5%;
+    padding: 30px 0;
+}
+
+/* レッスンタイトル */
+.lesson-title{
+    font-size: 25px;
+}
+
+.main-image{
+    width: 75%;
+    margin-left: 5%;
+    margin-right: 20%;
+    margin-top: 50px;
+}
+
+
+/* 各セクション */
+.section-title{
+    padding-top: 55px;
+    margin-bottom: 30px;
+}
+.section-title h6{
+    font-size: 20px;
+    padding: 10px 0 10px 10px;
+    border-top: 3px solid #A9A9A9;
+    border-bottom: 3px solid #A9A9A9;
+}
+.color{
+    color: #708090;
+}
+.next-sentence{
+    margin-top: 50px;
+}
+.next{
+    padding: 0 10px;
+    margin-left: 5px;
+}
+.next:hover{
+    text-decoration: underline;
+}
+
+/* レッスンの文章 */
+.sentence{
+    line-height: 2em;
+    letter-spacing: 0.1em;
+    width: 95%;
+    margin: 0 2.5%;
+}
+.sentence p, .sentence sup, .sentence li{
+    color: #696969;
+}
+.mark{
+    background:linear-gradient(transparent 60%, #FFFF00 60%);
+}
+.image{
+    margin-top: 5px;
+    margin-left: 20px;
+    border: 2px solid white;
+    transition: 0.3s;
+}
+.image:hover{
+    border: 2px solid #696969;
+}
+.image1{
+    height: 80px;
+    width: auto;
+}
+.image2{
+    height: 60px;
+    width: auto;
+}
+.image3{
+    height: 70px;
+    width: auto;
+}
+.image4{
+    height: 170px;
+    width: auto;
+}
+.image5{
+    height: 230px;
+    width: auto;
+}
+
+
+
+/* 目次 */
+.contents{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 100px;
+    border: 2px solid black;
+    position: relative;
+}
+
+/* 目次の背景を透明に */
+.contents, .contents ul, .contents li, .contents a{
+    background: rgba(0, 0, 0, 0);
+}
+
+/* 目次の中身 */
+.contents ul{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-left: 30px;
+}
+.contents li{
+    margin-bottom: 10px;
+}
+.contents a:hover{
+    color:rgba(0, 0, 0, 0.5);
+}
+.contents p{
+    padding: 0 10px;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: #708090;
+    display: block;
+    width: auto;
+}
+
+.side{
+    width: 28%;
+    background-color: #708090;
+}
+
+/* *{
+    border: 2px solid black;
+} */

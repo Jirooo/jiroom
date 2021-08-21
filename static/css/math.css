@@ -1,0 +1,74 @@
+
+/* メインの実装 */
+main{
+    position: relative;
+    z-index: 10;
+    display: flex;
+}
+
+/* メインコンテンツの実装 */
+.main{
+    width: 70%;
+}
+
+/* レッスンを置く場所 */
+.main-wrapper{
+    position: relative;
+    z-index: 20;
+    width: 75%;
+    margin-top: 30px;
+    margin-left: 20%;
+    margin-right: 5%;
+    overflow: hidden;
+}
+
+/* レッスンの枠 */
+.lesson1, .lesson2{
+    display: inline-block;
+    width: 320px;
+    height: 370px;
+    padding: 5px;
+}
+
+/* レッスン寄せ */
+.lesson1{
+    float: left;
+}
+.lesson2{
+    float: right;
+}
+
+.complex, .machine{
+    font-size: 16px;
+}
+.complex::before{
+    content: '[複素数] ';
+}
+.machine::before{
+    content: '[機械学習] ';
+}
+
+/* レッスン画像 */
+.lesson-image{
+    border: 2px solid white;
+    transition: 0.5s;
+}
+.lesson-image, .main-wrapper h3, .main-wrapper h5{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.lesson-image:hover{
+    border: 2px solid black;
+}
+
+
+
+/* サイドの実装 */
+.side{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 30%;
+    background-color: #708090;
+} 
