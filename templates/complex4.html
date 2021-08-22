@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/complex4.css') }}">
+<title>共役複素数</title>
+{% endblock %}
+
+{% block body %}
+<main>
+    <div class="main">
+        <div class="main-wrapper">
+           <div class="lesson">
+               <h3 class="lesson-title">[複素数] 共役複素数</h3>
+               <img src="static/images/complex/complex9.png" class="main-image">
+           </div>
+
+           <div class="section">
+              <div class="section-title" id="section1">
+                 <h6>共役複素数</h6>
+              </div>
+           </div>
+        </div>
+    </div>
+
+    <div class="side">
+        <div class="contents">
+            <p>Contents</p>
+            <ul>
+                <li><a href="#section1">共益複素数</a></li>
+            </ul>
+        </div>
+    </div>
+</main>
+{% endblock %}
